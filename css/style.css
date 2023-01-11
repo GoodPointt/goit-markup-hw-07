@@ -48,14 +48,10 @@ a {
 	color: inherit;
 	cursor: pointer;
 }
-button {
-	cursor: pointer;
-}
+
 .section {
 	padding-top: 120px;
 	padding-bottom: 120px;
-
-	/* outline: 2px dashed lime; */
 }
 .section.no-padding-top {
 	padding-top: 0;
@@ -67,8 +63,6 @@ button {
 	margin-right: auto;
 	padding-left: 15px;
 	padding-right: 15px;
-
-	/* outline: 2px dashed tomato; */
 }
 
 @media screen and (min-width: 480px) {
@@ -568,15 +562,17 @@ button {
 /*======================== FEATURE ========================*/
 
 .feature-list {
-	display: flex;
+	/* display: flex;
 	margin-left: -12px;
-	margin-right: -12px;
+	margin-right: -12px; */
 }
 
 .feature-item {
-	width: calc((100% - 24px * 3) / 4);
+	display: block;
+
+	/* width: calc((100% - 24px * 3) / 4);
 	margin-right: 12px;
-	margin-left: 12px;
+	margin-left: 12px; */
 }
 .feature-item .section-text {
 	padding-bottom: 0;
@@ -614,13 +610,13 @@ button {
 /*=========================== TEAM ===========================*/
 
 .team {
-	background: var(--secondary-color);
+	background-color: var(--secondary-color);
 }
 
 .team-list {
-	display: flex;
+	/* display: flex;
 	justify-content: space-between;
-	gap: 24px;
+	gap: 24px; */
 }
 
 .team-item {
@@ -856,8 +852,8 @@ button {
 /*======================= PORTFOLIO CARD ROW ====================*/
 
 .card-list {
-	display: flex;
-	flex-wrap: wrap;
+	/* display: flex;
+	flex-wrap: wrap; */
 }
 
 .card-item {
