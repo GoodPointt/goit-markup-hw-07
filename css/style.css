@@ -62,7 +62,7 @@ button {
 }
 
 .container {
-	width: 1158px;
+	/* width: 1158px; */
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 15px;
@@ -71,20 +71,21 @@ button {
 	/* outline: 2px dashed tomato; */
 }
 
-.card-item,
-.team-item {
-	/* outline: 2px dashed palegreen; */
+@media screen and (min-width: 480px) {
+	.container {
+		width: 428px;
+	}
 }
-
-/* .link {
-	text-decoration: none;
-	color: inherit;
+@media screen and (min-width: 768px) {
+	.container {
+		width: 768px;
+	}
 }
-.list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-} */
+@media screen and (min-width: 1200px) {
+	.container {
+		width: 1400px;
+	}
+}
 
 .visually-hidden {
 	position: absolute;
@@ -224,7 +225,7 @@ button {
 .hero {
 	padding: 192px 0;
 	height: 600px;
-	max-width: 1440px;
+	width: 1440px;
 	background-color: var(--title-text-color);
 	margin-left: auto;
 	margin-right: auto;
@@ -242,7 +243,7 @@ button {
 
 	color: var(--bg-color);
 
-	width: 496px;
+	max-width: 496px;
 	margin: 0 auto;
 	margin-bottom: 48px;
 }
