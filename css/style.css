@@ -98,14 +98,45 @@ a {
 	.footer {
 		text-align: center;
 	}
+	.footer-text-left {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 72px;
+	}
+
+	.social-list {
+		margin-bottom: 72px;
+	}
+
+	.subscribe-input {
+		margin-bottom: 16px;
+	}
+	.subscribe-btn {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.modal {
+		width: 392px;
+	}
 }
 
 @media screen and (min-width: 768px) {
 	.container {
 		width: 768px;
 	}
+	.modal {
+		width: 408px;
+	}
 }
 @media screen and (max-width: 1199px) {
+	.footer-text-left {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 72px;
+	}
+	.social-list {
+		margin-bottom: 72px;
+	}
 }
 
 @media screen and (min-width: 1200px) {
@@ -210,7 +241,7 @@ a {
 
 /*===================== LOGO ===========================*/
 .logo-link {
-	display: flex;
+	display: inline-flex;
 	font-family: "Raleway";
 	font-weight: 800;
 	font-size: 18px;
@@ -429,7 +460,6 @@ a {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
 
-	width: 408px;
 	padding: 24px;
 }
 
@@ -821,9 +851,11 @@ a {
 	color: var(--secondary-txt-color);
 	margin-top: 16px;
 	max-width: 264px;
+	text-align: start;
 }
 
 .footer-text-right {
+	display: block;
 	font-weight: 600;
 	margin-bottom: 16px;
 	line-height: 1.5;
