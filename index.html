@@ -23,6 +23,24 @@
 
 	<body>
 		<header class="page-header">
+			<div class="container mob">
+				<a href="./index.html" class="logo-link link">
+					Web
+					<span class="logo-name">Studio</span>
+				</a>
+				<button
+					class="burger-btn is-open"
+					data-menu-button
+					aria-expanded="false"
+					aria-controls="mobile-menu"
+					type="button"
+				>
+					<svg aria-label="Mobile menu switcher" width="32" height="22" class="burger">
+						<use class="icon-burger" xlink:href="./images/icons.svg#burger"></use>
+						<use class="icon-close" xlink:href="./images/icons.svg#close"></use>
+					</svg>
+				</button>
+			</div>
 			<div class="container header-nav">
 				<nav class="navigation">
 					<a href="./index.html" class="logo-link link">
@@ -192,7 +210,7 @@
 			</section>
 
 			<!--Section 2   WORK-->
-			<!-- <section class="work section no-padding-top">
+			<section class="work section no-padding-top">
 				<div class="container">
 					<h2 class="section-header">What are we doing</h2>
 					<ul class="work-list">
@@ -207,7 +225,7 @@
 						</li>
 					</ul>
 				</div>
-			</section> -->
+			</section>
 
 			<!--Section 3    TEAM-->
 			<section class="team section">
@@ -565,7 +583,16 @@
 
 			document.body.style.paddingTop = `${pageHeaderHeight}px`;
 		</script>
+		<script>
+			(() => {
+				const menuBtnRef = document.querySelector("[data-menu-button");
 
+				menuBtnRef.addEventListener("click", () => {
+					menuBtnRef.classList.toggle("is-open");
+				});
+			})();
+		</script>
 		<script src="./js/modal.js"></script>
+		<script src="./js/mobile.js"></script>
 	</body>
 </html>
