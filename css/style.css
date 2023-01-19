@@ -147,7 +147,13 @@ a {
 }
 
 .nav-link:active,
-.mobile-nav-link:active {
+.mobile-nav-link:active,
+.mobile-contacts-mail:hover,
+.mobile-contacts-mail:focus,
+.mobile-contacts-mail:active,
+.mobile-contacts-tel:hover,
+.mobile-contacts-tel:focus,
+.mobile-contacts-tel:active {
 	color: var(--btn-hover-color);
 }
 
