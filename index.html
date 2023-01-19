@@ -23,31 +23,14 @@
 
 	<body>
 		<header class="page-header">
-			<div class="container mob">
-				<a href="./index.html" class="logo-link link">
-					Web
-					<span class="logo-name">Studio</span>
-				</a>
-				<button
-					class="burger-btn is-open"
-					data-menu-button
-					aria-expanded="false"
-					aria-controls="mobile-menu"
-					type="button"
-				>
-					<svg aria-label="Mobile menu switcher" width="32" height="22" class="burger">
-						<use class="icon-burger" xlink:href="./images/icons.svg#burger"></use>
-						<use class="icon-close" xlink:href="./images/icons.svg#close"></use>
-					</svg>
-				</button>
-			</div>
 			<div class="container header-nav">
 				<nav class="navigation">
 					<a href="./index.html" class="logo-link link">
 						Web
 						<span class="logo-name">Studio</span>
 					</a>
-					<ul class="nav-list list">
+
+					<ul class="nav-list">
 						<li class="nav-item">
 							<a href="./index.html" class="nav-link link current">Studio</a>
 						</li>
@@ -59,8 +42,18 @@
 						</li>
 					</ul>
 				</nav>
-
-				<ul class="contacts-list list">
+				<button
+					class="mobile-menu-open is-open"
+					data-menu-button
+					aria-expanded="false"
+					aria-controls="mobile-menu"
+					type="button"
+				>
+					<svg aria-label="Mobile menu switcher" width="32" height="22" class="burger">
+						<use class="icon-burger" xlink:href="./images/icons.svg#burger"></use>
+					</svg>
+				</button>
+				<ul class="contacts-list">
 					<li class="contacts-item">
 						<a class="contacts-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
 					</li>
@@ -390,58 +383,58 @@
 					</ul>
 				</div>
 			</section>
-		</main>
 
-		<!--Section 4 CUSTOMERS-->
-		<section class="customers section">
-			<div class="container">
-				<h2 class="section-header">Customers</h2>
-				<ul class="customers-list">
-					<li class="customers-item">
-						<a class="customers-link" target="_blank" rel="norefferer noopener nofollow" href="">
-							<svg width="104" height="56">
-								<use xlink:href="./images/icons.svg#client1"></use>
-							</svg>
-						</a>
-					</li>
-					<li class="customers-item">
-						<a class="customers-link" target="_blank" rel="norefferer noopener nofollow" href="">
-							<svg class="customer-svg" width="104" height="56">
-								<use xlink:href="./images/icons.svg#client2"></use>
-							</svg>
-						</a>
-					</li>
-					<li class="customers-item">
-						<a class="customers-link" target="_blank" rel="norefferer noopener nofollow" href="">
-							<svg width="104" height="56">
-								<use xlink:href="./images/icons.svg#client3"></use>
-							</svg>
-						</a>
-					</li>
-					<li class="customers-item">
-						<a class="customers-link" target="_blank" rel="norefferer noopener nofollow" href="">
-							<svg width="104" height="56">
-								<use xlink:href="./images/icons.svg#client4"></use>
-							</svg>
-						</a>
-					</li>
-					<li class="customers-item">
-						<a class="customers-link" target="_blank" rel="norefferer noopener nofollow" href="">
-							<svg width="104" height="56">
-								<use xlink:href="./images/icons.svg#client5"></use>
-							</svg>
-						</a>
-					</li>
-					<li class="customers-item">
-						<a class="customers-link" target="_blank" rel="norefferer noopener nofollow" href="">
-							<svg width="104" height="56">
-								<use xlink:href="./images/icons.svg#client6"></use>
-							</svg>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</section>
+			<!--Section 4 CUSTOMERS-->
+			<section class="customers section">
+				<div class="container">
+					<h2 class="section-header">Customers</h2>
+					<ul class="customers-list">
+						<li class="customers-item">
+							<a class="customers-link" target="_blank" rel="norefferer noopener nofollow" href="">
+								<svg width="104" height="56">
+									<use xlink:href="./images/icons.svg#client1"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="customers-item">
+							<a class="customers-link" target="_blank" rel="norefferer noopener nofollow" href="">
+								<svg class="customer-svg" width="104" height="56">
+									<use xlink:href="./images/icons.svg#client2"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="customers-item">
+							<a class="customers-link" target="_blank" rel="norefferer noopener nofollow" href="">
+								<svg width="104" height="56">
+									<use xlink:href="./images/icons.svg#client3"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="customers-item">
+							<a class="customers-link" target="_blank" rel="norefferer noopener nofollow" href="">
+								<svg width="104" height="56">
+									<use xlink:href="./images/icons.svg#client4"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="customers-item">
+							<a class="customers-link" target="_blank" rel="norefferer noopener nofollow" href="">
+								<svg width="104" height="56">
+									<use xlink:href="./images/icons.svg#client5"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="customers-item">
+							<a class="customers-link" target="_blank" rel="norefferer noopener nofollow" href="">
+								<svg width="104" height="56">
+									<use xlink:href="./images/icons.svg#client6"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
 
 		<!--Footer-->
 		<footer class="footer">
@@ -525,6 +518,7 @@
 			</div>
 		</footer>
 
+		<!-- Backdrop + modal -->
 		<div class="backdrop is-hidden" data-modal>
 			<div class="modal">
 				<button data-modal-close class="close-modal">
@@ -602,20 +596,68 @@
 				</form>
 			</div>
 		</div>
-		<script>
-			const { height: pageHeaderHeight } = document.querySelector(".page-header").getBoundingClientRect();
+		<!-- Mobile menu -->
+		<div class="mobile-menu">
+			<div class="mobile-menu-container">
+				<button class="close-modal mobile-close">
+					<svg width="8" height="8">
+						<use xlink:href="./images/icons.svg#close"></use>
+					</svg>
+				</button>
+				<ul class="mobile-nav">
+					<li class="mobile-nav-item">
+						<a href="./index.html" class="mobile-nav-link">Studio</a>
+					</li>
+					<li class="mobile-nav-item">
+						<a href="./portfolio.html" class="mobile-nav-link">Portfolio</a>
+					</li>
+					<li class="mobile-nav-item">
+						<a href="" class="mobile-nav-link">Contacts</a>
+					</li>
+				</ul>
+				<ul class="mobile-contacts">
+					<li class="mobile-contacts-item">
+						<a class="mobile-contacts-tel" href="tel:+110001111111">+11 (000) 111-11-11</a>
+					</li>
+					<li class="mobile-contacts-item">
+						<a class="mobile-contacts-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+					</li>
+				</ul>
+				<ul class="social-list">
+					<li class="social-item">
+						<a href="https://instagram.com" target="_blank" rel="norefferer noopener nofollow" class="social-link">
+							<svg class="social-icon" height="24" width="24">
+								<use xlink:href="./images/icons.svg#inst"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social-item">
+						<a href="https://twitter.com" target="_blank" rel="norefferer noopener nofollow" class="social-link">
+							<svg class="social-icon" height="24" width="24">
+								<use xlink:href="./images/icons.svg#twt"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social-item">
+						<a href="https://fb.com" target="_blank" rel="norefferer noopener nofollow" class="social-link">
+							<svg class="social-icon" height="24" width="24">
+								<use xlink:href="./images/icons.svg#fb"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social-item">
+						<a href="https://linkedin.com" target="_blank" rel="norefferer noopener nofollow" class="social-link">
+							<svg class="social-icon" height="24" width="24">
+								<use xlink:href="./images/icons.svg#in"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-			document.body.style.paddingTop = `${pageHeaderHeight}px`;
-		</script>
-		<script>
-			(() => {
-				const menuBtnRef = document.querySelector("[data-menu-button");
-
-				menuBtnRef.addEventListener("click", () => {
-					menuBtnRef.classList.toggle("is-open");
-				});
-			})();
-		</script>
+		<!-- JS -->
+		<script src="./js/header-height.js"></script>
 		<script src="./js/modal.js"></script>
 		<script src="./js/mobile.js"></script>
 	</body>

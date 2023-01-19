@@ -42,7 +42,17 @@
 						</li>
 					</ul>
 				</nav>
-
+				<button
+					class="mobile-menu-open is-open"
+					data-menu-button
+					aria-expanded="false"
+					aria-controls="mobile-menu"
+					type="button"
+				>
+					<svg aria-label="Mobile menu switcher" width="32" height="22" class="burger">
+						<use class="icon-burger" xlink:href="./images/icons.svg#burger"></use>
+					</svg>
+				</button>
 				<!--Contacts-->
 				<ul class="contacts-list list">
 					<li class="contacts-item">
@@ -415,11 +425,7 @@
 				</form>
 			</div>
 		</footer>
-
-		<script>
-			const { height: pageHeaderHeight } = document.querySelector(".page-header").getBoundingClientRect();
-
-			document.body.style.paddingTop = `${pageHeaderHeight}px`;
-		</script>
+		<!-- JS -->
+		<script src="./js/header-height.js"></script>
 	</body>
 </html>
