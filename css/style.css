@@ -284,7 +284,7 @@ a {
 }
 
 .modal {
-	position: absolute;
+	position: relative;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(1);
@@ -306,7 +306,8 @@ a {
 }
 
 .modal .close-modal {
-	left: 360px;
+	top: 25px;
+	right: 25px;
 }
 
 .close-modal {
@@ -679,7 +680,6 @@ a {
 }
 
 .subscribe-input {
-	width: 264px;
 	height: 40px;
 	padding: 8px 16px;
 
@@ -817,7 +817,7 @@ a {
 
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-property: transform;
+	transition-property: transform, opacity;
 }
 .card-link:hover .overlay,
 .card-link:focus .overlay {
@@ -836,6 +836,11 @@ a {
 @media screen and (max-width: 1199px) {
 	.hero {
 		background-image: linear-gradient(to right, #2e2f42b3, #2e2f42b3), url(../images/dark-bg-tablet.jpg);
+	}
+	.section-title {
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 1.111;
 	}
 	.work {
 		display: none;
@@ -883,12 +888,23 @@ a {
 	.filter-list {
 		margin-bottom: 64px;
 	}
+	.container.footer-flex {
+		width: 535px;
+	}
 }
 
 /* 0 - 767px */
 @media screen and (max-width: 767px) {
 	.hero {
 		background-image: linear-gradient(to right, #2e2f42b3, #2e2f42b3), url(../images/dark-bg-mobile.jpg);
+	}
+
+	.modal {
+		width: 95%;
+		max-width: 392px;
+		height: 95%;
+		max-height: 586px;
+		overflow: scroll;
 	}
 
 	.mobile-menu {
@@ -1027,14 +1043,15 @@ a {
 	.footer-right .social-list {
 		justify-content: center;
 	}
-
+	.subscribe-input {
+		width: 90%;
+		max-width: 396px;
+	}
 	.subscribe-btn {
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.modal {
-		width: 392px;
-	}
+
 	.card-item {
 		max-width: 396px;
 		height: auto;
@@ -1102,7 +1119,11 @@ a {
 	.footer-left {
 		margin-right: 24px;
 	}
-
+	.flex-form {
+		display: flex;
+		gap: 24px;
+		margin-top: 16px;
+	}
 	.contacts-list {
 		display: block;
 		margin-left: auto;
@@ -1119,6 +1140,9 @@ a {
 		font-size: 56px;
 		line-height: 1.07;
 		margin-bottom: 40px;
+	}
+	.subscribe-input {
+		width: 264px;
 	}
 }
 
@@ -1220,11 +1244,6 @@ a {
 		margin-right: 120px;
 	}
 
-	.flex-form {
-		display: flex;
-		gap: 24px;
-		margin-top: 16px;
-	}
 	.card-item {
 		width: calc((100% - 48px) / 3);
 		margin-right: 24px;
@@ -1271,3 +1290,123 @@ a {
 		background-image: linear-gradient(to right, #2e2f42b3, #2e2f42b3), url(../images/hero-bg@2x.jpg);
 	}
 }
+
+/* TEST */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+label {
+	display: inline-block;
+	margin-right: 0.4em;
+}
+
+/* ---- isotope ---- */
+
+.grid {
+	border: 1px solid #333;
+}
+
+/* clear fix */
+.isotope:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* ---- .element-item ---- */
+
+.element-item {
+	position: relative;
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+	padding: 10px;
+	background: #888;
+	color: #262524;
+}
+
+.element-item > * {
+	margin: 0;
+	padding: 0;
+}
+
+.element-item .name {
+	position: absolute;
+
+	left: 10px;
+	top: 60px;
+	text-transform: none;
+	letter-spacing: 0;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.element-item .symbol {
+	position: absolute;
+	left: 10px;
+	top: 0px;
+	font-size: 42px;
+	font-weight: bold;
+	color: white;
+}
+
+.element-item .number {
+	position: absolute;
+	right: 8px;
+	top: 5px;
+}
+
+.element-item .weight {
+	position: absolute;
+	left: 10px;
+	top: 76px;
+	font-size: 12px;
+}
+
+.element-item.alkali {
+	background: #f00;
+	background: hsl(0, 100%, 50%);
+}
+.element-item.alkaline-earth {
+	background: #f80;
+	background: hsl(36, 100%, 50%);
+}
+.element-item.lanthanoid {
+	background: #ff0;
+	background: hsl(72, 100%, 50%);
+}
+.element-item.actinoid {
+	background: #0f0;
+	background: hsl(108, 100%, 50%);
+}
+.element-item.transition {
+	background: #0f8;
+	background: hsl(144, 100%, 50%);
+}
+.element-item.post-transition {
+	background: #0ff;
+	background: hsl(180, 100%, 50%);
+}
+.element-item.metalloid {
+	background: #08f;
+	background: hsl(216, 100%, 50%);
+}
+.element-item.diatomic {
+	background: #00f;
+	background: hsl(252, 100%, 50%);
+}
+.element-item.halogen {
+	background: #f0f;
+	background: hsl(288, 100%, 50%);
+}
+.element-item.noble-gas {
+	background: #f08;
+	background: hsl(324, 100%, 50%);
+}
+/* TEST */
